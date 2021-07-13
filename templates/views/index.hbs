@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/index.js" defer></script>
+    <script src="./js/index2.js" defer></script>
+   
+</head>
+{{!-- defer boolean is passed with script tag to ensure that the jasvsript should be exected  after the html document has been parsed butr befor DOmDontentLoaded --}}
+
+<body>
+{{>header}}
+</body>
+   <h3>Use this page to get weather information</h3>
+   <form><input type="text" placeholder="Type the place to search" name="location" id="myinput">
+<button id='button1' type="button" onclick="getInputValue();">Fetch Location</button></form>
+   
+
+<form id="form1">
+    <input  id="input1" placeholder="Type the place to search">
+    <button type="submit">Search</button>
+</form>
+<p id='para1'></p>
+<p id='para2'></p>
+<p id='para3'></p>
+
+
+<div class="details"></div>
+
+{{>footer}}
+</html>
