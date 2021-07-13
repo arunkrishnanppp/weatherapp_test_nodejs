@@ -10,7 +10,11 @@ function getInputValue() {
   let a = document.getElementsByClassName("details");
   console.log(a);
   a[0].innerHTML = "";
-  fetch(`http://localhost:3000/weather?address=${inputVal}`)
+
+  //need to change to heroku
+
+  // fetch(`http://localhost:3000/weather?address=${inputVal}`);
+  fetch(`/weather?address=${inputVal}`)
     .then((response) => {
       if (!response.ok)
         throw new Error("No Able to find the weather for this location");

@@ -9,6 +9,7 @@ const forcast = require("./utils/forcast");
  *
  */
 const app = express();
+const port = process.env.PORT || 3000;
 
 /**
  * ! Servig dynamic content using handlebar
@@ -126,7 +127,7 @@ app.get("/about/*", (req, res) => {
 app.get("*", (req, res) => {
   res.render("error");
 });
-app.listen(3000, () => {
-  console.log("APP is Running on 3000");
+app.listen(port, () => {
+  console.log("APP is Running on ", `${port}`);
 });
 console.log("New");
