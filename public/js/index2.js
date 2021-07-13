@@ -17,7 +17,7 @@ form.addEventListener("submit", (e) => {
   const location = inputValue.value;
   console.log(location);
   if (location != "") {
-    fetch(`http://localhost:3000/weather?address=${location}`)
+    fetch(`/weather?address=${location}`)
       .then((response) => {
         if (!response.ok)
           throw new Error("No Able to find the weather for this location");
